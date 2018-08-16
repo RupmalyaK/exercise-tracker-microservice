@@ -1,0 +1,21 @@
+const mongoose = require("mongoose");
+
+
+const Schema = mongoose.Schema;
+
+const exerciseSchema = new Schema({
+"description":{
+"type":String,
+"default":null
+},
+"duration":{
+"type":Number,
+"default":0
+},
+"date":{
+"type":Date,
+"default":Date.now
+}
+});
+
+exports.module = mongoose.mogel("Exercise" , exerciseSchema);
