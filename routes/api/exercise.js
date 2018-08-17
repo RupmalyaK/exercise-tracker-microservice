@@ -110,15 +110,4 @@ router.get("/log", (req , res) => {
 
 
 
-
-router.get("/all", (req,res) => {
-  const fromDate = new Date(null || "9999-12-12");
-  const toDate = new  Date(null || 1); 
-  console.log(fromDate>toDate);
-User.find() .populate({"path":"exercises" , model:"Exercise"}) .exec().then(docs => res.json(
-  docs
-)); 
-});
-
-
 module.exports = router; 
